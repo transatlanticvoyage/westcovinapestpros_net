@@ -10,7 +10,7 @@ import { AreaMap } from '../../components/areas/AreaMap';
 import { ContactSection } from '../../components/areas/ContactSection';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -21,7 +21,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const area = getAreaBySlug(params.slug);
+  const { slug } = await params;
+  const area = getAreaBySlug(slug);
   
   if (!area) {
     return {
@@ -99,8 +100,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function AreaPage({ params }: Props) {
-  const area = getAreaBySlug(params.slug);
+export default async function AreaPage({ params }: Props) {
+  const { slug } = await params;
+  const area = getAreaBySlug(slug);
 
   if (!area) {
     notFound();
