@@ -131,6 +131,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust & Experience Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Trusted Local Pest Control Experts</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              For over a decade, West Covina Pest Pros has been the go-to solution for homeowners and businesses facing pest challenges. Our deep understanding of Southern California's unique pest ecosystem, combined with cutting-edge treatment methods, ensures that your property receives the most effective protection available. We don't just eliminate pests; we create comprehensive defense strategies tailored to your specific environment and needs.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Our commitment extends beyond simple extermination. We educate our clients about prevention techniques, provide regular monitoring services, and stand behind our work with industry-leading guarantees. When you choose West Covina Pest Pros, you're partnering with professionals who treat your home with the same care and attention as their own.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
