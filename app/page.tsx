@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Link from 'next/link'
@@ -76,8 +77,14 @@ export default function Home() {
             </div>
             
             <div className="lg:text-right">
-              <div className="w-full h-80 bg-gray-200 rounded-xl flex items-center justify-center">
-                <p className="text-gray-500">About Image Placeholder</p>
+              <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/pest-control-west-covina-about-91790.png"
+                  alt="West Covina Pest Control Professional Service"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
