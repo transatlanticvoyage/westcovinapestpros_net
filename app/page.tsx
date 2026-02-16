@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Pest Control in West Covina Near Me 91791 - Ant Control, Bed Bug Extermination, Termite Treatment, Rodent Control',
@@ -21,7 +24,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Header />
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -136,5 +141,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   )
 }
